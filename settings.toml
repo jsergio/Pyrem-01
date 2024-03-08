@@ -1,0 +1,4 @@
+[default]
+LOAD_DOTENV = true
+FLASK_APP_PATH = "./"
+    

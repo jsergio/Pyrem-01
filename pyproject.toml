@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "pyrem"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+flask = "^3.0.2"
+dynaconf = "^3.2.4"
+requests = "^2.31.0"
+bootstrap-flask = "^2.3.3"
+
+
+[tool.poetry.group.dev.dependencies]
+blue = "^0.9.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

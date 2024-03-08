@@ -1,0 +1,22 @@
+from flask import Flask
+from dynaconf import FlaskDynaconf
+
+from pyrem.app.ext import teste_requeste
+
+app = Flask(__name__)
+
+FlaskDynaconf(app)
+
+teste_requeste.app_init(app)
+
+Resp = app.config['RESP']
+
+print(Resp)
+
+
+@app.route('/')
+def index():
+    return '<h1>Resp</m1>'
+
+if __name__ == '__main__':
+    app.run()
