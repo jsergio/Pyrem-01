@@ -1,0 +1,16 @@
+/*  */
+.datepicker, .table-condensed, td, tr , th{
+    /* text-align: center; */
+    /* padding: 0.5px 0.5px; */
+    font-family: Tajawal-Bold, sans-serif !important;
+    margin: 2 !important;
+    font-size: 1.2rem !important;
+    font-weight: bold !important;
+     color: brown !important; 
+    /* container: ;  */
+}
+#tela{
+    display: flex;
+    margin: auto;
+    width: 50%;
+}

@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset= "utf-8">
+<meta name= "viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{{ bootstrap.load_css() }}
+<link rel= "stylesheet" href= "https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src= "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js">
+</script>
+<link rel= "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" />
+<script src= "https://code.jquery.com/jquery-3.5.1.slim.min.js">
+</script>
+<script src= "https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js">
+</script>
+<!-- <script src= "https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" > -->
+<!-- </script> -->
+<script src= "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.js"  >
+</script>
+
+<title> bootstrap Datepicker tutorial </title>
+
+<script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}">
+</script>
+
+</head>
+<body>
+<h1 style= "margin-left:200px;"> Bootstrap Datepicker </h1>
+<div class= 'container' style= 'margin-top: 90px;'>
+<input type= 'text' class= "form-control"  id= 'example' placeholder= 'enter the date' style= 'width: 500px;' >
+<br/><br/>
+<input type= 'button' id= 'id1' value= 'Set StartDate'>
+<input type= 'button' id= 'id2' value= 'Get StartDate'>
+<input type= 'button' id= 'id3' value= 'Set EndDate'>
+<input type= 'button' id= 'id4' value= 'Get EndDate'>
+<br/><br/>
+<div id= 'responsive'></div>
+</div>
+<script type="text/javascript">
+$(document). ready(function(){
+$('#example') .datepicker();
+$('#id1') .click(function(){
+$('#example') .datepicker ('setStartDate', '-5m');
+});
+$('#id2') .click(function(){
+var startDate = $('#example').datepicker ('getStartDate');
+$('# responsive ') .text('Start Date : ' + startDate);
+});
+$('#id3') .click(function(){
+$('#example').datepicker('setEndDate', '+5m');
+});
+$('#id4') .click(function(){
+var startDate = $('#example').datepicker('getEndDate');
+$('# responsive ') .text('End Date : ' + startDate);
+});
+});
+</script>
+</body>
+</html>

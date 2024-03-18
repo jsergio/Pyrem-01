@@ -4,7 +4,7 @@ from datetime import datetime
 
 url = 'https://economia.awesomeapi.com.br/json/daily/USD-BRL/15'
 
-print('\n\n\nURL = ',url,'\n\n\n')
+print('\n\n\nURL = ', url, '\n\n\n')
 
 response = requests.get(url)
 
@@ -14,7 +14,9 @@ if response.status_code == 200:
     data = response.json()
 
     # Agora você pode manipular os dados conforme necessário
-    dts = [str(datetime.fromtimestamp(int(item['timestamp']))) for item in data]
+    dts = [
+        str(datetime.fromtimestamp(int(item['timestamp']))) for item in data
+    ]
 
     for item in dts:
         print(item)

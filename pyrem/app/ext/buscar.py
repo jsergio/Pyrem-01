@@ -11,6 +11,7 @@ def monta_url(*args):
 
     # URL da API que você deseja consumir
 
+
 url = monta_url('USD-BRL', 'EUR-BRL', 'GBP-BRL')
 
 response = requests.get(url)
@@ -21,6 +22,7 @@ if response.status_code == 200:
 else:
     # Se a requisição falhou, imprima o código de status
     data = response.status_code
+
 
 def init_app(app):
     app.config['RESP'] = data
