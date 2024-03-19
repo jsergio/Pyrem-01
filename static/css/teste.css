@@ -1,3 +1,16 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    }
+html{
+    font-size: 62.5%;
+    }
+.grid{
+    width: 100rem;
+    display: grid;
+    grid-auto-flow: column;
+    }
 /*  */
 .datepicker, .table-condensed, td, tr , th{
     /* text-align: center; */
@@ -6,7 +19,7 @@
     margin: 2 !important;
     font-size: 1.2rem !important;
     font-weight: bold !important;
-     color: brown !important; 
+    color: brown !important; 
     /* container: ;  */
 }
 #tela{

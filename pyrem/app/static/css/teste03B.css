@@ -1,0 +1,60 @@
+
+    body {
+      background-color: lightslategrey;
+      color: yellow;
+      /* padding: 0; */
+    }
+
+    /* .modal-open{
+        padding: 0;
+    } */
+
+    /* Diminui o tamanho do calendário */
+    .modal-body {
+      padding: 0;
+      margin: 0;
+    }
+
+    .datepicker-modal {
+      width: 18%;
+      /* height: 5%;       */
+    }
+
+
+    /* Diminui o tamanho do calendário */
+    .datepicker-modal table {
+      background-color: darkblue;
+      color: yellow;
+      font-size: 1.3rem;
+      /* Reduz o tamanho do texto */
+      font-weight: 900;
+      max-width: 60%;
+      /* width: 1.6 rem; */
+      padding: 5px !important;
+      /* margin-left:0 !important; */
+    }
+
+    .datepicker-modal table pd {
+      padding: 3 !important;
+    }
+
+    /* Diminui o tamanho do modal */
+    .modal-dialog-small {
+      padding: 0;
+      max-width: 14%;
+      /*Define   a largura máxima*/
+      /* max-height: 2%; Defime Altura */
+    }
+
+    /* .mclass .container .input-group .form-control input{ */
+    /* width: 50% !important; */
+    /* } */
+    /* /* .datepicker-modal{ */
+    /* padding: 0; */
+    /* margin: 0; */
+    /* }  */
+
+    .datepicker-modal .table .table-content {
+      width: 50%;
+    }
+  
