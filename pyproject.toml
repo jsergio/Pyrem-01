@@ -11,6 +11,7 @@ flask = "^3.0.2"
 dynaconf = "^3.2.4"
 requests = "^2.31.0"
 bootstrap-flask = "^2.3.3"
+python-dotenv = "^1.0.1"
 
 
 [tool.poetry.group.dev.dependencies]

@@ -4,38 +4,78 @@
     box-sizing: border-box;
   }
 
-  /* html{
-    font-size: 62.5%;
-  } */
+  pre{
+  display: inline;
+  }
 
-  body {
+#botao2{
+display: inline;
+background-color: blue;
+color: yellow;
+margin-left: 50 px;
+}
+
+scan #bt2{
+margin-left: 30px;
+}
+
+.checkbox{
+  background-color: blue;
+  color: yellow;
+}
+
+   body {
     background-color: lightslategrey;
     color: yellow;
   }
 
-    /* Diminui o tamanho do calendário */
-    .modal-body {
+  #mtab {
+  background-color: lightslategrey !important;
+  color: yellow !important;
+  }
+  
+  /* essa classe, .tab1, vem de <tab> do arquivo dt_final.py */
+  .tab1{
+    width : 50%;
+    font-weight: 800 !important;
+    font-size: 0.8rem !important;
+    background-color: lightslategrey !important;
+    color: yellow !important;
+    border-color: indigo !important;
+    margin: auto;
+    margin-top:8rem;
+    & tbody{
+      background-color: gray;
+    }
+    & thead{
+      background-color: teal;  
+    }
+    & td,th {
+    text-align: center !important;
+    }
+  }
+
+    #p1,#p2{
+      display: none;
+    }
+
+    #dtpic {
       padding: 0;
       margin: 0;
     }
 
     /* Diminui o tamanho do calendário */
-    .datepicker-modal table {
+    table {
       background-color: darkblue;
       color: yellow;
-      font-size: 0.9rem;
+      width: 50%;
+      font-size: 0.5rem;
       font-weight: 900;
-      padding-right: 0.4rem !important;
-      /* padding: 10px !important; */
-    }
-    /* Diminui o tamanho do modal */
-    .modal-dialog-small {
-      padding: 0;
-      margin: 0;
-      max-width: 20%;
-    }
-    
-    .table-condensed{ 
+      padding-right: 0.2rem 0.2rem ; 
+      /* padding-left: .5 rem !important; */ 
+      }
+
+     .table-condensed{ 
      width: 100%;
     
      & .old,
@@ -44,40 +84,55 @@
       }
 
     & .today{
-      text-align: center;
+      /* text-align: center; */
       border-radius: 50%;
       background-color: rgb(2, 144, 192) ;
-      font-size: 1.1rem;
+      /* font-size: 1.1rem; */
     }
 
+    & .day{
+      text-align: center;
+    }
+  
     & .day:hover{
-      text-align: center;
+      /* text-align: center; */
       border-radius: 50%;
       background-color: rgb(2, 144, 192) ;
-      font-size: 1.2rem;
+      /* font-size: 1rem; */
     }
 
+    } 
+    #botao{
+      display: flex;
+      padding: 0;
+      margin: 0;
+      align-self: center;
+      padding-top: -1 rem;
+    color: white;
     }
     .grid{
+      width: 25rem;
       display: grid;
       grid-auto-flow: column;
-      
-      & section {
-        width: 100rem;
-        height: 10rem;
-      }
-      
+    
       & .sec1{
-        padding-top: 1rem;
-        width: 60rem;
-        height: 10rem;
+        margin: 0;
+        padding: auto;
+        width: 21rem;
+        /* height: 10rem; */
+        border: 3px solid blueviolet;
       }
   
       & .sec2{
-        padding-top: 1.2rem;
-        padding-left: 19rem;
-        width: 90rem;
-        height: 50rem;
+        padding-top: 0px;
+        padding-left: 0px;
+        /* padding-left: 19rem; */
+        width: 8rem;
+        height: 3rem;
+        border: 3px solid rgb(86, 7, 160);
       }
-    }
-  
+    
+    }    /* fecha grid */
+      
+    
+   
