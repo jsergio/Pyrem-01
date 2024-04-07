@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toggle Datepicker</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <p>
+
+  </p>
+  <div class="container">
+    <h2>Toggle Datepicker</h2>
+    <div class="form-group" id="datepicker">
+      <!-- <input type="text" class="form-control" id="datepicker" placeholder="Select Date"> -->
+    </div>
+    <div id="datepickerControls">
+      <button id="toggleDatepicker" class="btn btn-primary">Abrir</button>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+  <script>
+    $(document).ready(function () {
+
+      $('#toggleDatepicker').on('click', function () {
+        let btnnow = $('#toggleDatepicker').text()
+        if (btnnow == 'Abrir') {
+          $('#datepicker').datepicker().show()
+          $(this).text('Fechar')
+        }
+        else {
+          $('#datepicker').datepicker().hide()
+          $(this).text('Abrir')
+        }
+      })
+    });
+  </script>
+</body>
+
+</html>

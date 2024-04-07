@@ -1,0 +1,65 @@
+<!doctype html>
+
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <title>datepicker demo</title>
+
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+
+  <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+
+  <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+</head>
+
+<body style="background-color: black;">
+
+
+
+  <div id="datepicker">
+    <button id="botao">
+
+    </button>
+  </div>
+
+
+
+  <script>
+    var flag = true;
+    $(document).ready(function () {
+      function muda(estado) {
+        if (estado == 0) {
+          $("#datepicker").datepicker();
+        } else {
+          $("#datepicker").css('  {display:none;}')
+        }
+      }
+      var estado = 0;
+
+      $('#botao').on("click", function () {
+        muda(estado);
+        if (estado == 0) { estado = 1 } else { estado = 0 }
+      })
+
+    })
+    // $('#botao').on("click", function () {
+    //   $("#datepicker").datepicker();
+    // });
+    // $('#botao').on(
+    //   function f2() {
+    //     $("#datepicker").hide();
+    //   }),
+    //   function f1() {
+    //     $("#datepicker").datepicker();
+    //   }
+  </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block title %}
+Cotação
+{% endblock title %}
+
+{% block local_stl %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/teste03.css')}}">
+{% endblock local_stl %}
+
+{% block header %}
+<h1>
+  Teste de Header
+</h1>
+{% endblock header %}
+
+{% block corpo %}
+<scan class="grid">
+  <section class="sec1">
+    <div class="container m-2 ">
+      <div class="input-group-text date">
+        <!-- <input type="text" id="input"  class="form-control datepicker" 
+      placeholder="Selecione a data" readonly data-bs-target="#calendarModal"> -->
+        <input type="text" id="input" class="form-control">
+        <button class="btn btn-outline-secondary" type="button" data-bs-toggle="modal" data-bs-target="#calendarModal">
+          <i class="fas fa-calendar"></i> <!-- Ícone para abrir o calendário -->
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec2">
+    <!-- Modal para exibir o calendário -->
+    <div class="modal fade " id="calendarModal" tabindex="-1" aria-labelledby="calendarModalLabel" aria-hidden="true">
+      <div class="modal-dialog  modal-dialog-small">
+        <!-- Adicionando a classe modal-dialog-small para diminuir o tamanho do modal -->
+        <div class="modal-content">
+          <div class="modal-body">
+            <!-- Aqui você pode incluir o datepicker -->
+            <div class="datepicker-modal"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</scan>
+<!-- Bootstrap Bundle com Popper.js -->
+{% endblock corpo %}
+
+{% block footer %}
+<!-- <scrip src="{{ url_for('static', filename='js/teste3b.js')}}"> -->
+<script>
+  $(document).ready(function () {
+
+    // Inicializa o datepicker dentro do modal
+    $('.datepicker-modal').datepicker({
+      language: 'pt-BR',
+      todayHighlight: true,
+      // startDate: '-3d',
+      autoclose: true,
+      format: "dd/mm/yyyy"
+    });
+
+    // Atualiza o valor do campo de entrada quando uma data é selecionada no calendário dentro do modal
+    $('.datepicker-modal').on('changeDate', function () {
+      var selectedDate = $(this).datepicker('getFormattedDate');
+      $('#input').val(selectedDate);
+      // $('#calendarModal').modal('hide');
+    });
+
+    // Evita que o campo de entrada abra o calendário diretamente ao ser clicado
+    // $('.datepicker').on('click', function(event) {
+    // event.stopPropagation();
+    // });
+  });
+
+</script>
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}
+Datepicker
+{% endblock title %}
+
+{% block local_stl %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/teste03.css')}}">
+{% endblock local_stl %}
+
+{% block header %}
+<h2>
+  Teste-2b de Header
+</h2>
+{% endblock header %}
+
+{% block corpo %}
+<scan class="grid">
+  <div class="sec1">
+    <div class="container">
+      <button id="toggleDatepicker" class="btn btn-primary">Abrir</button>
+      <!-- <div class="input-group-text date"> -->
+      <!-- <input type="text" id="input"  class="form-control datepicker" 
+      placeholder="Selecione a data" readonly data-bs-target="#calendarModal"> -->
+      <!-- <input type="text" id="input" class="form-control"> -->
+      <!-- <button class="btn btn-outline-secondary" type="button" data-bs-toggle="sec2" data-bs-target="#calendarModal">
+          <i class="fas fa-calendar"></i>
+        </button> -->
+      <!-- <div id="datepickerControls"> -->
+
+      <!-- </div> -->
+      <!-- </div> -->
+    </div>
+  </div>
+
+
+  <div class="sec2" id="dtpick">
+    <!-- Modal para exibir o calendário -->
+    <!-- <div id="calendarModal" aria-labelledby="calendarModalLabel" aria-hidden="true"> -->
+    <!-- Adicionando a classe modal-dialog-small para diminuir o tamanho do modal -->
+    <!-- <div class="datepicker-modal" id="mdtpic"></div> -->
+    <p></p>
+    <div id="mdtpic" class="mdtpic"></div>
+  </div>
+  </div>
+</scan>
+<!-- Bootstrap Bundle com Popper.js -->
+{% endblock corpo %}
+
+{% block footer %}
+
+<script src="{{ url_for('static', filename='js/dtpicker.js')}}"></script>
+
+{% endblock footer %}
