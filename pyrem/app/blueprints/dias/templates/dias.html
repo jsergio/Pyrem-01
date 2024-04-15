@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block title %}
+Início
+{% endblock title %}
+
+{% block local_stl %}
+
+<link rel="stylesheet" href="{{ url_for('dias.static', filename='css/style.css')}}">
+
+
+</script>
+{% endblock local_stl %}
+
+{% block header %}
+<h4 id="cabeca1">
+  Consultar Cotação de Moeda em Dias Anteriores a Data Atual
+</h4>
+
+{% endblock header %}
+
+{% block corpo %}
+<div id="aaa">
+  Alo
+</div>
+
+<div id="bbb">
+  Alo
+</div>
+
+<div id="container" class="div1">
+  <div id="div1">
+    <label for="num">
+      Escolha o número de dias para cotação
+    </label>
+  </div>
+  <div id="div2">
+    <input type="number" min="1" max="30" value="5" id="num1" class="clasnum">
+  </div>
+  <div id="div3">
+
+    <div id="div4">
+      <span id="spanMoedas">
+        <h6> Defina, uma moeda para cotação, clicando nela:</h6>
+      </span>
+      <div id="div4-1">
+        <input type="radio" name="moeda" id="Dolar" value="Dolar" checked class="form-check-input radio">
+        <label for="Dolar" class="form-check-label">Dolar</label>
+        <pre>       </pre>
+        <input type="radio" name="moeda" id="Euro" value="Euro" class="radio form-check-input">
+        <label for="Euro" class="form-check-label">Euro</label>
+      </div>
+      <div id="div4-2">
+        <input type="radio" name="moeda" id="Libra" value="Libra" class="radio form-check-input">
+        <label for="Libra" class="form-check-label">Libra</label>
+        <pre>       </pre>
+        <input type="radio" name="moeda" id="Shekel" value="Shekel" class="radio form-check-input">
+        <label for="Shekel" class="form-check-label">Shekel</label>
+      </div>
+    </div>
+
+
+  </div> <!-- divMpedas-->
+
+  <scan id="bt">
+    <button id="botao" class="btn btn-outline-primary" type="button">
+      ENTER
+    </button>
+  </scan>
+
+</div>
+
+{% endblock corpo %}
+
+{% block footer %}
+<script src="{{ url_for('dias.static', filename='js/script.js')}}"></script>
+{% endblock footer %}

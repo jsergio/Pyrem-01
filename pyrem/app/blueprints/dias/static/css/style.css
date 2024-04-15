@@ -1,0 +1,80 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ body {
+  background-color: black; 
+  color: yellow;
+}
+#tit_tab{
+color: yellow;  
+text-align: center;
+background-color: #666;
+}
+.tab{
+display: flex;
+justify-content: center;
+}
+#mtab{
+  width: 50%;
+  text-align: center;
+  background-color: #777;
+  color: yellow;
+  & thead{
+    background-color: teal;  
+  }
+}
+
+#num1{
+  background-color: #777;
+  color: #ff8;
+  border-radius: 50%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-left: 2%;
+  padding-right: 1%;
+  border: 0 none;
+}
+
+input[type=radio]{
+  text-decoration-line: center;
+}
+
+h4{
+  text-align: center;
+}
+
+#bt{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+#div1{
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+#div2{
+ text-align: center;
+}
+
+#div3{
+  display: flex;
+  font-weight: 800;
+  justify-content: center;
+  margin: auto;
+}
+
+#div4{
+  text-align: center;
+  margin: 3%;
+}
+
+#div4-1,#div4-2{
+  display: flex;
+  margin-left : 33%;
+}

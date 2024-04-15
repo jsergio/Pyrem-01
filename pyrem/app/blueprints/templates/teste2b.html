@@ -7,14 +7,19 @@ Datepicker
 {% block local_stl %}
 <!-- <scrip src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
   </script> -->
-<!-- <scrip src="{{ url_for('static', filename='js/jQuery.js')}}">
-</scrip> -->
-<link rel="stylesheet" href="{{ url_for('static', filename='css/teste03.css')}}">
+<!-- <scrip src="{{ url_for('static', filename='js/teste2b.js')}}"></scrip> -->
+<!-- <scrip src="{{ url_for('static', filename='js/jQuery.js')}}"> -->
+<!-- </scrip> -->
+
+<link rel="stylesheet" href="{{ url_for('.static', filename='css/teste03.css')}}">
+<!-- <scrip src="{{ url_for('cotacao.static', filename='js/teste2b.js')}}"> -->
+<!-- </scrip> -->
 {% endblock local_stl %}
+
 {% block header %}
 
 <h6>
-  teste2b
+  Consultar cotação de moedas no dia de hoje.
 </h6>
 
 {% endblock header %}

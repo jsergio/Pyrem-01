@@ -72,7 +72,7 @@ def busca(**args):
 def init_app(app,**args):
     data = {'pob':{'Dolar':'USD:BRL'}}
     if 'pobj' in args:
-        # print('Pobj = ',args['pobj'])
+        print('Pobj = ',args['pobj'])
         data = busca(p1=args['pobj'])
         # print('Data Final ',data)
         dt_res = dt_final.tratar(p=data)

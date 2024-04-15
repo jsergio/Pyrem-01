@@ -1,38 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-BR" data-bs-theme="dark">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cotação de Moedas</title>
-    {{ bootstrap.load_css() }}
-    <link rel="stylesheet" type="text/css"  href="{{ url_for('static', filename='css/moedas.css')}}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cotação de Moedas</title>
+  {{ bootstrap.load_css() }}
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/moedas.css')}}">
 </head>
+
 <body>
 
-<div class="container dark ">
-  <h2 class="text-center">Cotação de Moedas</h2><br>
-  <h2 class="text-center"> Dia {{resp['USDBRL']['dia']}}</h2>
-  <table class="table table-bordered border-primary mx-auto"  >
-    <!-- <table class="table"></table> -->
-    <thead>
-      <tr class="mx-auto">
-        <th class="px-5" scope="col">Moedas</th>
-        <th class="px-5" scope="col">Valor</th>
-        <th class="px-5" scope="col">Hora</th>
-      </tr>
-    </thead>
-    <tbody>
+  <div class="container dark ">
+    <h2 class="text-center">Cotação de Moedas</h2><br>
+    <!-- <h2 class="text-center"> Dia {{resp['USDBRL']['dia']}}</h2> -->
+    <table class="table table-bordered border-primary mx-auto">
+      <!-- <table class="table"></table> -->
+      <thead>
+        <tr class="mx-auto">
+          <th class="px-5" scope="col">Moedas</th>
+          <th class="px-5" scope="col">Valor</th>
+          <th class="px-5" scope="col">Hora</th>
+        </tr>
+      </thead>
+      <tbody>
         {% for chave, valor in resp.items() %}
-         <tr>
-            <td class="px-5">{{valor['nome_moeda']}}</td>
-            <td class="px-5">{{valor['valor_moeda']}}</td>
-            <td class="px-5">{{valor['hora']}}</td>
-          </tr>
-         {% endfor %}
+        <tr>
+          <td class="px-5">{{valor['nome_moeda']}}</td>
+          <td class="px-5">{{valor['valor_moeda']}}</td>
+          <td class="px-5">{{valor['hora']}}</td>
+        </tr>
+        {% endfor %}
 
-    </tbody>
-  </table>
-</div>
-{{ bootstrap.load_js() }}
+      </tbody>
+    </table>
+  </div>
+  {{ bootstrap.load_js() }}
 </body>
+
 </html>

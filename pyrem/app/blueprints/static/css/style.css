@@ -1,0 +1,7 @@
+.nav .nav-item{
+width: 30rem !important;
+}
+
+.active{
+ background-color: aqua !important;
+}

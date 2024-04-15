@@ -20,35 +20,32 @@
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
 
   <!-- <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
-  <link rel="stylesheet" href="{{ url_for('.static', filename='css/style.css')}}">
+
 
   {% block local_stl %}
-
   {% endblock local_stl %}
 
 </head>
 
 <body>
-  <header>
-
-    <nav class="navbar navbar-dark bg-dark">
-      <!-- Navbar content -->
-      <div class="container">
-        <!-- <h1 class="logo">Ardit's web app</h1> -->
-        <strong>
-          <a href="{{ url_for('init.init') }}" class="nav-item active mx-4 active aa" style="text-decoration: none ;">
-            Início
-          </a>
-          <a href="{{ url_for('cotacao.teste2') }}" class="nav-item mx-4" style="text-decoration: none;"> Hoje </a>
-          <a href="{{ url_for('dias.dias') }}" class="nav-item mx-4" style="text-decoration: none;"> Dias </a>
-          <a href="{{ url_for('cotacao.teste0') }}" class="nav-item mx-4" style="text-decoration: none;">Exemplo2</a>
-        </strong>
-      </div>
-    </nav>
-
-    {% block header %} {% endblock %}
-  </header>
   <main>
+    <header>
+
+      <nav class="navbar navbar-dark bg-dark">
+        <!-- Navbar content -->
+        <div class="container-fluid">
+          <!-- <h1 class="logo">Ardit's web app</h1> -->
+          <strong>
+            <a href="{{ url_for('init.init') }}" class="nav-item"> Início </a>
+            <a href="{{ url_for('cotacao.teste0') }}" class="nav-item"> Hoje </a>
+            <a href="{{ url_for('cotacao.teste3') }}" class="nav-item">Exemplo</a>
+            <a href="{{ url_for('cotacao.teste2') }}" class="nav-item">Exemplo2</a>
+          </strong>
+        </div>
+      </nav>
+
+      {% block header %} {% endblock %}
+    </header>
     {% block corpo %}
     {% endblock corpo %}
   </main>

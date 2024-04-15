@@ -4,11 +4,21 @@ from flask import Blueprint, render_template, request, jsonify
 from ..ext import buscar
 
 # Cria um objeto Blueprint
-tmp = os.path.abspath('pyrem/app/blueprints/templates')
+# templ_local = os.path.abspath('pyrem/app/blueprints/templates')
+# stati_local = os.path.abspath('/pyrem/app/blueprints/static')
+
+# print('Locais Template e Staticc',templ_local,stati_local)
+
+# cotacao_bp = Blueprint('cotacao', __name__, 
+#     template_folder='/Users/sergiosette/python/pyrem/pyrem/app/blueprints/templates',
+#     static_folder='/Users/sergiosette/python/pyrem/pyrem/app/blueprints/static/');
 
 cotacao_bp = Blueprint(
-    'cotacao', __name__, template_folder=tmp, static_folder='static'
-)
+    'cotacao', __name__, 
+    template_folder='templates',
+    static_folder='static',
+    # static_url_path='/pyrem/app/blueprints/'
+    );
 
 
 def nomeia(cod):
@@ -94,5 +104,5 @@ def init_app(app):
             return jsonify(response_data)
 
             # Registra o Blueprint no aplicativo Flask
-            app.register_blueprint(cotacao_bp)
+            # app.register_blueprint(cotacao_bp)
     app.register_blueprint(cotacao_bp)
