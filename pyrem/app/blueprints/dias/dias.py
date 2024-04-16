@@ -7,7 +7,7 @@ from ....app.ext.tabelizar import obj_to_table
 dias_bp = Blueprint('dias', __name__, 
     template_folder='templates',
     static_folder='static',
-    static_url_path='/pyrem/app/blueprints/dias/'
+    static_url_path='/pyrem/app/blueprints/dias'
     );
 
 

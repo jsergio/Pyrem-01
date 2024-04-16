@@ -1,0 +1,38 @@
+.nav .nav-item{
+  width: 30rem !important;
+  }
+  
+  .active{
+   background-color: aqua !important;
+  }
+
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+   body {
+    background-color: lightslategrey;
+    color: yellow;
+  
+  }
+  #div{
+    height: 26rem;
+  }
+  #div1{
+    display: flex;
+    height: 13rem;
+    justify-content: center;
+    align-items: end;
+    margin: auto;
+  }
+  #div2{
+    display: flex;
+    height: 13rem;
+    font-weight: 800;
+    justify-content: center;
+    align-items: start;
+    margin: auto;
+  }
+  

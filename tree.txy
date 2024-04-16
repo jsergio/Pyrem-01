@@ -1,0 +1,142 @@
+.
+├── README.md
+├── __init__.py
+├── __pycache__
+│   ├── __init__.cpython-312.pyc
+│   ├── app.cpython-312.pyc
+│   └── cloud.txt
+├── app.py
+├── config.py
+├── poetry.lock
+├── pyproject.toml
+├── pyrem
+│   ├── __init__.py
+│   ├── __pycache__
+│   │   └── __init__.cpython-312.pyc
+│   ├── app
+│   │   ├── __init__.py
+│   │   ├── __pycache__
+│   │   │   └── __init__.cpython-312.pyc
+│   │   ├── blueprints
+│   │   │   ├── __pycache__
+│   │   │   │   └── principal_views.cpython-312.pyc
+│   │   │   ├── dias
+│   │   │   │   ├── __pycache__
+│   │   │   │   │   └── dias.cpython-312.pyc
+│   │   │   │   ├── dias.py
+│   │   │   │   ├── static
+│   │   │   │   │   ├── css
+│   │   │   │   │   │   └── style.css
+│   │   │   │   │   └── js
+│   │   │   │   │       └── script.js
+│   │   │   │   └── templates
+│   │   │   │       └── dias.html
+│   │   │   ├── hoje
+│   │   │   │   ├── __pycache__
+│   │   │   │   │   └── hoje.cpython-312.pyc
+│   │   │   │   ├── hoje.py
+│   │   │   │   ├── static
+│   │   │   │   │   ├── css
+│   │   │   │   │   │   └── style.css
+│   │   │   │   │   └── js
+│   │   │   │   │       └── script.js
+│   │   │   │   └── templates
+│   │   │   │       ├── base.html
+│   │   │   │       └── hoje.html
+│   │   │   ├── init
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── __pycache__
+│   │   │   │   │   ├── __init__.cpython-312.pyc
+│   │   │   │   │   └── init.cpython-312.pyc
+│   │   │   │   ├── init.py
+│   │   │   │   ├── static
+│   │   │   │   │   └── css
+│   │   │   │   │       └── style.css
+│   │   │   │   └── templates
+│   │   │   │       └── init.html
+│   │   │   ├── principal_views_old.py
+│   │   │   ├── static
+│   │   │   │   ├── css
+│   │   │   │   │   ├── aaa.html
+│   │   │   │   │   ├── moedas.css
+│   │   │   │   │   ├── style.css
+│   │   │   │   │   ├── teste.css
+│   │   │   │   │   ├── teste02.css
+│   │   │   │   │   └── teste03.css
+│   │   │   │   └── js
+│   │   │   │       ├── dtpicker.js
+│   │   │   │       ├── jQuery.js
+│   │   │   │       ├── main.js
+│   │   │   │       ├── teste01.js
+│   │   │   │       ├── teste2b.js
+│   │   │   │       └── teste3b.js
+│   │   │   └── templates
+│   │   │       └── old
+│   │   │           ├── base.html
+│   │   │           ├── cotacao.html
+│   │   │           ├── exemple_dt.html
+│   │   │           ├── teste0.html
+│   │   │           ├── teste00.html
+│   │   │           ├── teste01.html
+│   │   │           ├── teste02.html
+│   │   │           ├── teste03.html
+│   │   │           ├── teste2b.html
+│   │   │           ├── teste3b.html
+│   │   │           ├── teste_dt.html
+│   │   │           ├── teste_ptbr.html
+│   │   │           └── testex.html
+│   │   ├── ext
+│   │   │   ├── __pycache__
+│   │   │   │   ├── buscar.cpython-312.pyc
+│   │   │   │   ├── buscar_dias.cpython-312.pyc
+│   │   │   │   ├── dt_final.cpython-312.pyc
+│   │   │   │   └── tabelizar.cpython-312.pyc
+│   │   │   ├── buscar.py
+│   │   │   ├── buscar_dias.py
+│   │   │   ├── configuracao.py
+│   │   │   ├── dt_final.py
+│   │   │   ├── pega_cotacoes.py
+│   │   │   └── tabelizar.py
+│   │   ├── static
+│   │   │   └── css
+│   │   │       └── teste03B.css
+│   │   └── templates
+│   ├── app.py_old
+│   └── templates
+├── settings.toml
+├── static
+│   ├── css
+│   │   ├── aaa.html
+│   │   ├── moedas.css
+│   │   ├── style.css
+│   │   ├── teste.css
+│   │   ├── teste02.css
+│   │   └── teste03.css
+│   └── js
+│       ├── dtpicker.js
+│       ├── jQuery.js
+│       ├── main.js
+│       ├── teste01.js
+│       ├── teste2b.js
+│       └── teste3b.js
+├── static_old
+│   ├── css
+│   │   ├── aaa.html
+│   │   ├── moedas.css
+│   │   ├── teste.css
+│   │   ├── teste02.css
+│   │   └── teste03.css
+│   └── js
+│       ├── dtpicker.js
+│       ├── jQuery.js
+│       ├── main.js
+│       ├── teste01.js
+│       ├── teste2b.js
+│       └── teste3b.js
+├── templates
+│   └── base0.html
+├── tests
+│   └── __init__.py
+└── tree.txy
+
+44 directories, 96 files
