@@ -7,39 +7,21 @@ def monta_url(**args):
     result_tmp = []
     if 'p2' in args:
 
-        tmp = args['p2']
-        print('Tmp = ',tmp)
-        # Esse if a seguir, por enquato nao importa muito
-        if 'data' in tmp:
-            ldata = tmp['data'];
-            result_tmp.append(f"{ldata}");
-        
-        # Esse if realiza a funcao de montar url
-        if 'moedas' in tmp:    
-            lmoedas = tmp['moedas'];
-            list_moedas = []
-            if type(lmoedas == 'dict'):
-                print('É UM DICT !')
-                for key in lmoedas:
-                    if key in {'Dolar','Euro','Libra','Shekel'}:
+        lmoedas = args['p2']
+        print('Tmp = ',lmoedas)
+        list_moedas = []
+        if type(lmoedas == 'dict'):
+            print('É UM DICT !')
+            for key in lmoedas:
+                if key in {'Dolar','Euro','Libra','Shekel'}:
                         list_moedas.append(lmoedas[key])
                     # list_moedas = lmoedas['key']
-            print('Lista = ',list_moedas)    
-            # result_tmp.append(f"{list_moedas}")
-            # if(type(lmoedas) == 'dict'):
-            # lista_values = lmoedas.values()
-            # print('Lista1',lmoedas['dolar'])
-            print('Tipo = ',type(lmoedas))
-            print('Lmoedas = ',lmoedas)
-            # print('List Moedas = ',list_moedas)
+            print('Lista = ',list_moedas) 
             result_local = result[0:-7]   # retira USD-BRL de result
             temp0 = ','.join(list_moedas)   # tjunta os argumentos entre virgulas
             result = result_local + temp0+'/';
             print('Result = ',result)
-    return result
-
-    # URL da API que você deseja consumir
-
+        return result
 
 def busca(**args):
     # url = monta_url(*args)
@@ -74,9 +56,9 @@ def init_app(app,**args):
     if 'pobj' in args:
         print('Pobj = ',args['pobj'])
         data = busca(p1=args['pobj'])
-        # print('Data Final ',data)
+        print('Data Final ',data)
         dt_res = dt_final.tratar(p=data)
-        print('Dt-Res ',dt_res);
+        # print('Dt-Res ',dt_res);
         return dt_res   
     app.config['RESP'] = data
     return data

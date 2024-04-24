@@ -25,12 +25,17 @@ def init_app(app):
     def hoje():
         if request.method == 'POST':
             print('POST AQUÍ')
+            # data_obj é o objeto recebido pelo Ajax
             data_obj = request.get_json();
             print('Data_OBJ = ',data_obj)
-            url,vmoeda,vnum = data_obj['obj_res']
-            print('URL = ',url);
-
-            tmp = buscar.init_app(app,url);
+            # Aqi pega o dict das moedas 
+            
+            vmoedas = data_obj['moedas']
+            
+            print('VMOEDAS = ',vmoedas);
+            
+            # Monta URL e pega cotacoes
+            tmp = buscar.init_app(app,pobj=vmoedas);
             # tabela = obj_to_table([tmp,vmoeda,vnum])
             return jsonify(tmp);
         else:

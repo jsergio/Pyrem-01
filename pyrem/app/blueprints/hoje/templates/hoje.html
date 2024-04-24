@@ -1,104 +1,82 @@
 {% extends "base.html" %}
 
 {% block title %}
-Datepicker
+Cotação
 {% endblock title %}
 
 {% block local_stl %}
+<!-- Importa o jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+</script>
+<!-- Importa o style local. Arquivo css -->
 <link rel="stylesheet" href="{{ url_for('hoje.static', filename='css/style.css')}}">
 {% endblock local_stl %}
 
 {% block header %}
 
-<h6>
+<h4>
   Consultar cotação de moedas no dia de hoje.
-</h6>
+</h4>
 
 {% endblock header %}
 
+
+
 {% block corpo %}
+
 
 <div class="container">
 
-  <p id="p1">
-    p1
-  </p>
-  <div id="divMoedas">
+  <!-- <div id="divMoedas"> -->
+  <div id="div1" class="div">
     <span id="spanMoedas">
-      <h6> Marque, clicando no retângulo ao lado,</h6>
-      <h6>pelo menos, uma moedas</h6>
+      <h6> Escolha uma ou mais moedas abaixo.</h6>
+      <h6>Clique para marcar ou dismarcar.</h6>
     </span>
-    <input type="checkbox" name="USD-BRL" id="Dolar" class="checkbox">
-    <label for="Dolar">Dolar</label>
-    <pre>   </pre>
-    <input type="checkbox" name="EUR-BRL" id="Euro" class="checkbox">
-    <label for="Euro">Euro</label>
-    <br>
-    <input type="checkbox" name="GBP-BRL" id="Libra" class="checkbox">
-    <label for="Libra">Libra</label>
-    <pre>   </pre>
-    <input type="checkbox" name="ILS-BRL" id="Shekel" class="checkbox">
-    <label for="Shekel">Shekel</label>
-    <scan id="bt2">
-      <button id="botao2" class="btn btn-outline-secondary" type="button">
+
+    <span id="span1">
+      <input type="checkbox" name="USD-BRL" checked id="Dolar" class="form-check-input checkbox">
+      <label id="lb1-1" for="Dolar">Dolar</label>
+      <!-- <pre>   </pre> -->
+      <input type="checkbox" name="EUR-BRL" id="Euro" class="form-check-input checkbox">
+      <label id="lb1-2" for="Euro">Euro</label>
+    </span>
+    <span id="span2">
+      <input type="checkbox" name="GBP-BRL" id="Libra" class="form-check-input checkbox">
+      <label id="lb2-1" for="Libra"> Libra </label>
+      <!-- <pre>   </pre> -->
+      <input type="checkbox" name="ILS-BRL" id="Shekel" class="form-check-input checkbox">
+      <label id="lb2-2" for="Shekel"> Shekel </label>
+    </span>
+    <span id="bt2">
+      <button id="botao2" class="btn btn-secondary" type="button">
         ENTER
       </button>
-    </scan>
-  </div> <!-- divMpedas-->
+    </span>
+  </div>
 
-  <span id="spanButton">
-    <button id="botao" class="btn btn-outline-secondary" type="button">
-      Clique aqui para escolher uma data
-    </button>
-  </span>
-
+  <!-- </div> divMoedas -->
 </div> <!-- Container -->
-</div> <!-- sec1 -->
 
-
-<div class="sec2">
-  <p id="p2">
-    p2
-  </p>
-  <scan id="resp"></scan>
-  <!-- Modal para exibir o calendário -->
-  <div id="calendarModal" aria-labelledby="calendarModalLabel" aria-hidden="true">
-    <!-- Adicionando a classe modal-dialog-small para diminuir o tamanho do modal -->
-    <div class="datapicker" id="dtpick"></div>
-  </div> <!-- calendarModal-->
-</div> <!-- sec2 -->
-</scan>
-<!-- Bootstrap Bundle com Popper.js -->
 {% endblock corpo %}
 
 {% block footer %}
 <script>
   $(document).ready(function () {
+    console.log('Aqui')
+    // $(document).ready(function () {
+    $('#botao2').on('click', function () {
+      console.log('Aqui Click')
+      let btMoedas = []
 
-    $('#spanButton').hide();
-    // $('#botao').hide();
-    var btMoedas = []
+      btMoedas = [
+        $('#Dolar').is(':checked'),
+        $('#Euro').is(':checked'),
+        $('#Libra').is(':checked'),
+        $('#Shekel').is(':checked')
+      ]
 
-    // function addCheckbox(name) {
-
-    //   const container = $("#cblist");
-    //   const inputs = container.find("input");
-    //   const id = inputs.length + 1;
-
-    //   $("<input />", { type: "checkbox", id: "cb" + id, value: name }).appendTo(container);
-    //   $("<label />", { "for": "cb" + id, text: name }).appendTo(container);
-    // }
-
-    const widget = $("#dtpick").datepicker({
-      language: 'pt-BR',
-      todayHighlight: true,
-      container: 'div.dtpic',
-      format: 'dd/mm/yyyy'
-    }).hide();
-
-
-    widget.on('changeDate', function () {
-      widget.hide();
+      console.log('Btmoedas', btMoedas);
 
       function monta_escolhas() {
         result = {}
@@ -114,26 +92,14 @@ Datepicker
             // moedas_escolhidas[`${tmp[i].id}`] = `${tmp[i].name}`
             result[`${tmp[i].id}`] = `${tmp[i].name}`
           }
-        }
+        } //end for
+
         console.log('Monta Escolhas = ', result);
-        return result
-      }
-
-      const selectedDate = widget.datepicker('getFormattedDate');
+        return result;
+      } // End monta_escolhas
       const moedas_escolhidas = monta_escolhas()
-      const dd = JSON.stringify({ 'data': selectedDate, 'moedas': moedas_escolhidas })
+      const dd = JSON.stringify({ 'moedas': moedas_escolhidas })
       console.log('DADO ', dd);
-
-
-      // function pegaval(param) {
-
-      // const tmp = param['data'];
-      // const tmp2 = param['moedas']
-      // const val1 = tmp['bid'].slice(0, -2);
-      // const dt = tmp['create_date'].slice(0, -8);
-
-      // return `Valor = ${val1} Data = ${dt} moedas=${tmp2}`;
-      // }
 
       $.ajax({
         url: '/hoje',
@@ -142,50 +108,17 @@ Datepicker
         dataType: 'json',
         contentType: 'application/json; charset=utf-8',
         success: (result, status, request) => {
-          $('.sec1, .sec2').hide();
-          tmpdiv = { 'pp': '<div class="tab" id="tab1"></div>' };
-          $('main').html(tmpdiv.pp);
-          // console.log('Result = ', result);
-          $('#tab1').html(result.response);
-          console.log('Sucess', result.response);
+          $('h4').hide()
+          $('container').hide();
+          tmpdiv = '<div class="tab" id="tab1"></div>';
+          $('main').html(tmpdiv);
+          $('.tab').html(result);
+          console.log('Sucess', result);
         }
-      })
-
-    });
-
-    $('#botao2').on('click', function () {
-
-      btMoedas = [
-        $('#Dolar').is(':checked'),
-        $('#Euro').is(':checked'),
-        $('#Libra').is(':checked'),
-        $('#Shekel').is(':checked')
-      ]
-
-      // $('#spanMoedas').text(`Dolar = ${brDolar}`)
-      // alert(`btDolar = ${btDolar}\nbtEuro = ${btEuro}\nbtLibra = ${btLibra}\nbtShekel = ${btShekel}`)
-
-      $('#divMoedas').hide();
-      $('#spanButton').show();
-    })
-
-    $('#botao').on('click', function () {
-      const testo = $('#p2').text().trim()
-
-      if (testo == 'p2') {
-        $('#p1').text('clicou 1')
-        $('#p2').text('Not p2')
-
-        widget.show()
-
-      } else {
-        $('#p1').text('clicou 2')
-        $('#p2').text('p2')
-
-        widget.hide()
-
-      }
-    });
-  });
+      }) // end Ajax
+    }) //End Click
+  }) //End Documment ready
 </script>
+
 {% endblock footer %}
+<!-- </div>  Final Conteudo -->

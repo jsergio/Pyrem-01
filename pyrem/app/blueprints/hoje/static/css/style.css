@@ -1,38 +1,137 @@
-.nav .nav-item{
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+#botao2{
+  margin: auto;
+  text-align: center;
+}
+
+/* div{
+border: 2px solid yellow;
+} */
+
+/* #conteudo{
+display: block;
+margin-top: 3%;
+margin-left: 20%;
+margin-right: 20%;
+text-align: center;
+} */
+
+/* .nav .nav-item{
   width: 30rem !important;
   }
   
   .active{
    background-color: aqua !important;
-  }
+  } */
 
-  *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
   
    body {
     background-color: lightslategrey;
     color: yellow;
   
   }
-  #div{
-    height: 26rem;
+
+  .container{
+  display: flex;
+  justify-self: auto;
+  justify-content: center;
+  align-items: center;
+  /* padding-top: 3%; */
+  /* justify-items: center; */
+  /* align-items: center; */
+  /* text-align: center; */
+}
+table,caption{
+text-align: center;
+}
+
+.tab{
+  margin: auto;
+  margin-top: 10%;
+  width: 50%;
+  text-align: center;
+  background-color: #777;
+  color: yellow;
+  & thead{
+    background-color: teal;  
+  }
+}
+
+
+  h4{
+    text-align: center;
+    padding-top: 2%;  
+    padding-bottom: 2%;
+  }
+  #spanMoedas{
+  text-align: center;
+  padding-top: 2%;
   }
   #div1{
-    display: flex;
-    height: 13rem;
-    justify-content: center;
-    align-items: end;
-    margin: auto;
-  }
-  #div2{
-    display: flex;
-    height: 13rem;
+    border: 2px solid yellow;
+    display: inline-block;
+    /* height: 12rem; */
+    padding-top: 1%;
+    width: 20rem;
+    text-align: center;
+    /* margin-top: 20%; */
     font-weight: 800;
-    justify-content: center;
-    align-items: start;
+  }
+
+  #span1{
+    border: 2px solid blue;
+    display: flex;
+    justify-content: start;
+    width: 50%;
+    height: 2rem;
     margin: auto;
+    margin-top: 5%;
+  }
+
+  #span2{
+    display: flex;
+    justify-content: start;  
+    border: 2px solid green;
+    width: 50%;
+    height: 2rem;
+    margin: auto;
+    margin-top: 5% ;
+   }
+
+  #Dolar,#Libra{
+    margin-left: 5%;
+    margin-right: 1%;
+  }
+
+  #lb1-1{
+    padding-left: 1%;
+    text-align:start;
   }
   
+  #Euro{
+    margin-top: 2rm;
+    margin-left: 5%
+  }
+
+  #lb1-2{
+    padding-top: 2rm;
+    padding-left: 1%;
+    text-align:start;
+  }
+  
+  #lb2-1,#lb2-2{
+    padding-left: 1%;
+    text-align:start;
+  }
+  
+  #Shekel{
+    margin-left: 6%
+  }
+
+  #bt2,#botao2{
+  margin-top: 3px;
+  }
